@@ -117,7 +117,7 @@ section h2 {
   display: none;
 }
 
-section p {
+#about p {
   line-height: 1.3;
   font-size: 1.2rem;
   color: #f1f0ccc3;
@@ -171,12 +171,15 @@ li:hover {
 }
 
 .project-item {
+  border-radius: 10px;
+}
+
+.project-item a {
   display: flex;
   align-items: center;
   gap: 30px; /* space between image and text */
   /* margin-bottom: 30px; */
   padding: 15px;
-  border-radius: 10px;
 }
 
 .project-item img {
@@ -198,14 +201,41 @@ li:hover {
   gap: 5px;
 }
 
-.project-item:hover {
+.project-item:hover strong {
   color: #d5bf86;
+}
+
+.project-item:hover {
   background-color: #d5bf8627;
   transition: 0.3s;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .resume {
   font-weight: normal;
-  font-size: 0.6rem;
+  font-size: 1rem;
+}
+
+.resume:hover {
+  color: #d5bf86;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.technologies span {
+  background-color: #3f0d1296;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  color: #d5bf86;
+}
+
+.project-info strong {
+  letter-spacing: 1px;
+  font-family: "Roboto Mono", monospace;
 }
