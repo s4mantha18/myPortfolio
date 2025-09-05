@@ -73,6 +73,8 @@ nav {
   letter-spacing: 3px;
   /* padding: 10px 10px; */
   /* background-color: #ff0019; */
+  transition: 0.4s;
+  gap: 10px;
 }
 
 nav::before {
