@@ -1,33 +1,26 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const navs = document.getElementsByTagName("nav");
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = Array.from(document.querySelectorAll(".nav-link"));
   const sections = [
     document.getElementById("about"),
     document.getElementById("projects"),
     // Add more sections if needed
-  ];
+  ].filter(Boolean); // Remove nulls
 
-  function activateNavOnScroll() {
-    let index = sections.length - 1;
-    for (let i = 0; i < sections.length; i++) {
-      const rect = sections[i].getBoundingClientRect();
-      if (rect.top <= 100) {
-        index = i;
-      }
-    }
-    for (let n = 0; n < navs.length; n++) {
-      navs[n].classList.toggle("nav-active", n === index);
-    }
-  }
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navLinks.forEach((link) =>
+            link.classList.toggle(
+              "nav-active",
+              link.getAttribute("href") === `#${entry.target.id}`
+            )
+          );
+        }
+      });
+    },
+    { threshold: 0.6 }
+  );
 
-  window.addEventListener("scroll", activateNavOnScroll);
-
-  // Optional: also activate on click
-  for (let nav of navs) {
-    nav.addEventListener("click", function () {
-      for (let n of navs) {
-        n.classList.remove("nav-active");
-      }
-      nav.classList.add("nav-active");
-    });
-  }
+  sections.forEach((section) => observer.observe(section));
 });

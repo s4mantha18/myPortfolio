@@ -63,7 +63,7 @@ header p {
   font-size: 1rem;
 }
 
-nav {
+.nav-link {
   display: flex;
   align-items: center;
   font-size: 0.9rem;
@@ -71,41 +71,34 @@ nav {
   color: #ffffffb7;
   font-family: "Roboto Mono", monospace;
   letter-spacing: 3px;
-  /* padding: 10px 10px; */
-  /* background-color: #ff0019; */
   transition: 0.4s;
-  gap: 10px;
+  gap: 1px;
+  padding: 10px 0;
+  position: relative;
 }
 
-nav::before {
+.nav-link::before {
   content: "";
   display: block;
   width: 30px;
   height: 1px;
   background-color: #ffffffb7;
-  margin: 6px 0;
+  margin-right: 10px;
   transition: 0.4s;
 }
 
-nav:hover::before,
+.nav-link:hover::before,
 .nav-active::before {
   width: 90px;
   background-color: #d5bf86;
-  color: #d5bf86;
 }
 
 .nav-active {
   color: #d5bf86;
 }
 
-nav:hover {
+.nav-link:hover {
   color: #d5bf86;
-}
-
-.nav {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 section h2 {
@@ -243,11 +236,11 @@ li:hover {
 }
 
 /* ========== TABLET (768px–1023px) ========== */
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   body {
-    grid-template-columns: 200px 1fr; /* narrower sidebar */
-    gap: 40px;
-    padding: 40px px;
+    grid-template-columns: 1fr 1.5fr; /* narrower sidebar */
+    gap: 10px;
+    padding: 40px 30px;
   }
 
   .left {
@@ -262,12 +255,6 @@ li:hover {
   header h1 {
     font-size: 2rem;
     line-height: 1.2;
-  }
-
-  #projects {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px;
   }
 
   .project-item a {
@@ -287,7 +274,7 @@ li:hover {
   body {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 5px 20px;
     gap: 20px;
   }
 
@@ -295,25 +282,34 @@ li:hover {
     position: relative; /* remove fixed on small screens */
     width: 100%;
     height: auto;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
     padding: 15px 0;
-    gap: 20px;
+    gap: 0px;
     border-bottom: 1px solid #d5bf8627;
   }
 
-  header {
-    display: none; /* hide name/desc to save space */
-  }
-
-  .socials {
-    display: none; /* hide socials bar on top */
-  }
-
   .nav {
-    flex-direction: row;
-    gap: 15px;
+    display: none;
+  }
+
+  section h2 {
+    display: block;
+    font-family: "Roboto Mono", monospace;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 12px 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #f1f0cc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    font-size: 1.2rem;
   }
 
   .right {

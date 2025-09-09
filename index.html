@@ -7,11 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
       rel="stylesheet"
@@ -23,6 +31,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <meta
+      name="description"
+      content="Portfolio of Samantha Oloruntoba — aspiring front-end software engineer, showcasing projects, skills, and experience."
+    />
+    <meta property="og:title" content="Samantha Oloruntoba Portfolio" />
+    <meta
+      property="og:description"
+      content="Aspiring front-end software engineer with projects in recruitment, e-commerce, and more."
+    />
+    <meta property="og:image" content="img/recruitement_ss.png" />
+    <meta property="og:url" content="https://your-portfolio-link.com" />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <div class="left">
@@ -34,9 +54,8 @@
         </p>
       </header>
       <section class="nav">
-        <a href="#about"><nav class="about">ABOUT</nav></a>
-        <!-- <nav>SKILLS</nav> -->
-        <a href="#projects"><nav class="projects">PROJECTS</nav></a>
+        <a href="#about" class="nav-link about">ABOUT</a>
+        <a href="#projects" class="nav-link projects">PROJECTS</a>
       </section>
       <section class="socials">
         <a href="https://github.com/s4mantha18"
@@ -53,7 +72,7 @@
 
     <div class="right">
       <section id="about">
-        <h2>About Me</h2>
+        <h2>ABOUT</h2>
         <p>
           Hello! I'm Samantha, a passionate aspiring software engineer with an
           aim to create innovative solutions. With a background in a few
@@ -98,10 +117,14 @@
       </section> -->
 
       <section id="projects">
-        <h2>Projects</h2>
+        <h2>PROJECTS</h2>
         <div class="project-item">
           <a href="https://s4mantha18.github.io/recruitment-site/">
-            <img src="img/recruitement_ss.png" alt="" />
+            <img
+              src="img/recruitement_ss.webp"
+              alt="Screenshot of recruitment website project"
+              loading="lazy"
+            />
             <div>
               <div class="project-info">
                 <strong
