@@ -21,7 +21,7 @@ A personal portfolio website showcasing my projects and skills.
 * Responsive design for desktop and mobile
 * Project showcase with images and descriptions
 * About Me section with skills and background
-*  social links
+* Social links
 
 ---
 
