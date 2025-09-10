@@ -54,12 +54,6 @@ This project can be deployed easily with **GitHub Pages**:
 
 ---
 
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
 ## 📬 Contact
 
 * GitHub: [@s4mantha18](https://github.com/s4mantha18)
